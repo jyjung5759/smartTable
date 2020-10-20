@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
-    android:background="?android:attr/selectableItemBackground"
+    android:background="?attr/selectableItemBackground"
     android:layout_height="50dp">
     <TextView
         android:id="@+id/tv_indicator_title"

@@ -3,6 +3,7 @@ package com.bin.david.smarttable.view;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
+import androidx.appcompat.app.AppCompatActivity;
 import android.util.DisplayMetrics;
 import android.view.Gravity;
 import android.view.View;
@@ -41,7 +42,7 @@ public class BaseDialog extends Dialog {
 		}
 		LayoutParams params = window.getAttributes();
 		window.getDecorView().setPadding(0, 0, 0,0);
-		Rect rect = getScreen((Activity) builder.context);
+		Rect rect = getScreen((AppCompatActivity) builder.context);
 		if(builder.isFillHeight){
 			params.height = rect.getHeight()- (builder.margin != null? builder.margin[1] + builder.margin[3] :0);
 		}else {
@@ -74,7 +75,7 @@ public class BaseDialog extends Dialog {
 	 */
 	public void notifyHeight(boolean isFillHeight){
 		Window window = this.getWindow();
-		Rect rect = getScreen((Activity) builder.context);
+		Rect rect = getScreen((AppCompatActivity) builder.context);
 		LayoutParams params = window.getAttributes();
 		if(isFillHeight){
 			params.height = rect.getHeight()- (builder.margin != null? builder.margin[1] + builder.margin[3] :0);
@@ -121,7 +122,7 @@ public class BaseDialog extends Dialog {
 	/**
 	 * 获取分辨率
 	 */
-	public static Rect getScreen(Activity activity) {
+	public static Rect getScreen(AppCompatActivity activity) {
 
 		int displayWidth = 0, displayHeight = 0;
 		DisplayMetrics dm = new DisplayMetrics();

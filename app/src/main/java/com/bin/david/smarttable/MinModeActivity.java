@@ -2,12 +2,9 @@ package com.bin.david.smarttable;
 
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.graphics.Canvas;
-import android.graphics.Paint;
-import android.graphics.Rect;
 import android.os.Bundle;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.WindowManager;
 import android.widget.Toast;
 
@@ -18,7 +15,6 @@ import com.bin.david.form.data.column.Column;
 import com.bin.david.form.data.column.ColumnInfo;
 import com.bin.david.form.data.format.bg.BaseBackgroundFormat;
 import com.bin.david.form.data.format.bg.BaseCellBackgroundFormat;
-import com.bin.david.form.data.format.bg.IBackgroundFormat;
 import com.bin.david.form.data.format.bg.ICellBackgroundFormat;
 import com.bin.david.form.data.format.draw.BitmapDrawFormat;
 import com.bin.david.form.data.format.draw.TextImageDrawFormat;

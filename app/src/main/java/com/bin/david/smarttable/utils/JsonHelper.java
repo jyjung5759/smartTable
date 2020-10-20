@@ -1,6 +1,6 @@
 package com.bin.david.smarttable.utils;
 
-import android.support.annotation.IntDef;
+import androidx.annotation.IntDef;
 import android.text.TextUtils;
 import android.util.Log;
 

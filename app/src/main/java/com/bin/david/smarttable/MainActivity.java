@@ -2,9 +2,9 @@ package com.bin.david.smarttable;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 
 import com.bin.david.smarttable.adapter.ItemAdapter;
@@ -14,14 +14,11 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-
-    private RecyclerView recyclerView;
-    private ItemAdapter itemAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         ArrayList<MainItem> items = new ArrayList<>();
         items.add(new MainItem(FormModeActivity.class,"表单模式"));
@@ -50,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         items.add(new MainItem(AvatorModeActivity.class,"头像（高级）"));
 
 
-        itemAdapter = new ItemAdapter(items);
+        ItemAdapter itemAdapter = new ItemAdapter(items);
         recyclerView.setAdapter(itemAdapter);
         itemAdapter.openLoadAnimation();
         itemAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {

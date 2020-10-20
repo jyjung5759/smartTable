@@ -1,6 +1,5 @@
 package com.bin.david.smarttable;
 
-import android.app.Application;
 import android.content.Context;
 
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
@@ -21,7 +20,7 @@ import okhttp3.OkHttpClient;
  * Created by huang on 2017/11/4.
  */
 
-public class BaseApplication extends android.support.multidex.MultiDexApplication {
+public class BaseApplication extends androidx.multidex.MultiDexApplication {
     //static 代码段可以防止内存泄露
     static {
         //设置全局的Header构建器

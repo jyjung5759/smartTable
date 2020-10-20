@@ -1,7 +1,6 @@
 package com.bin.david.smarttable.view;
 
-import android.app.Activity;
-
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.bin.david.smarttable.bean.TableStyle;
 
@@ -20,7 +19,7 @@ public class QuickChartDialog {
         map = new HashMap<>();
     }
 
-    public   void showDialog(Activity activity, TableStyle chartStyle, String[] dataList, OnCheckChangeAdapter adapter){
+    public   void showDialog(AppCompatActivity activity, TableStyle chartStyle, String[] dataList, OnCheckChangeAdapter adapter){
         BaseCheckDialog<String> dialog;
         if(map.containsKey(chartStyle)){
             dialog = map.get(chartStyle);

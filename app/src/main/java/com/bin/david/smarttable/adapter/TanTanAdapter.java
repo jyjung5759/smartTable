@@ -1,11 +1,9 @@
 package com.bin.david.smarttable.adapter;
 
-import android.net.Uri;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.widget.ImageView;
 
 import com.bin.david.smarttable.R;
-import com.bin.david.smarttable.bean.MainItem;
 import com.bin.david.smarttable.bean.TanBean;
 import com.bumptech.glide.Glide;
 import com.chad.library.adapter.base.BaseQuickAdapter;

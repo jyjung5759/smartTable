@@ -7,8 +7,7 @@ import android.graphics.Color;
 import android.graphics.DashPathEffect;
 import android.graphics.Paint;
 import android.graphics.Rect;
-import android.support.v4.content.ContextCompat;
-import android.util.Log;
+import androidx.core.content.ContextCompat;
 
 import com.bin.david.form.core.SmartTable;
 import com.bin.david.form.core.TableConfig;
@@ -29,10 +28,7 @@ import com.daivd.chart.data.style.FontStyle;
 import com.daivd.chart.data.style.LineStyle;
 import com.daivd.chart.data.style.PointStyle;
 import com.daivd.chart.provider.component.cross.VerticalCross;
-import com.daivd.chart.provider.component.level.LevelLine;
 import com.daivd.chart.provider.component.point.Point;
-import com.daivd.chart.provider.component.tip.MultiLineBubbleTip;
-import com.daivd.chart.utils.DensityUtils;
 
 import org.apache.poi.hssf.usermodel.HSSFChart;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
