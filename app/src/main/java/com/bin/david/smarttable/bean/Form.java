@@ -9,6 +9,7 @@ import com.bin.david.form.data.form.IForm;
  */
 
 public class Form implements IForm {
+
     private int spanWidthSize =1;
     private int spanHeightSize = 1;
     private String name;

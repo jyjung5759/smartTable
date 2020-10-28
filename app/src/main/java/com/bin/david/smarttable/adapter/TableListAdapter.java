@@ -35,8 +35,12 @@ import java.util.Random;
  */
 
 public class TableListAdapter extends BaseQuickAdapter<String,BaseViewHolder> {
+
+
+
     public TableListAdapter(@Nullable List<String> data) {
         super(R.layout.item_table, data);
+
     }
 
     @Override

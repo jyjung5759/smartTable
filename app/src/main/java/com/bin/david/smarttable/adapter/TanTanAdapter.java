@@ -16,6 +16,8 @@ import java.util.List;
  */
 
 public class TanTanAdapter extends BaseQuickAdapter<TanBean,BaseViewHolder> {
+
+
     public TanTanAdapter(@Nullable List<TanBean> data) {
         super(R.layout.item_tantan, data);
     }
@@ -23,8 +25,9 @@ public class TanTanAdapter extends BaseQuickAdapter<TanBean,BaseViewHolder> {
     @Override
     protected void convert(BaseViewHolder helper, TanBean item) {
         helper.setText(R.id.tvName,item.getName());
-        Glide.with(mContext)
-            .load(item.getUrl())
-            .into((ImageView)helper.getView(R.id.iv));
+        Glide
+                .with(mContext)
+                .load(item.getUrl())
+                .into((ImageView) helper.getView(R.id.iv));
     }
 }

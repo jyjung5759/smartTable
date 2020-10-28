@@ -5,6 +5,7 @@ package com.bin.david.smarttable.bean;
  */
 
 public class StudentInfo {
+
     private String name;
     private String url;
 
