@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 import com.bin.david.smarttable.adapter.ItemAdapter;
 import com.bin.david.smarttable.bean.MainItem;
@@ -24,14 +25,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+//        getSupportFragmentManager().beginTransaction().add(R.id.content, new TableListFragment()).commit();
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         ArrayList<MainItem> items = new ArrayList<>();
 //        items.add(new MainItem(TableListActivity.class,"TableList - 测试手势冲突"));
 //        items.add(new MainItem(ManyActivity.class,"Many - 测试大量列"));
 
-        items.add(new MainItem(TableListFragment.class,"TableList - 测试手势冲突"));
-        items.add(new MainItem(ManyFragment.class,"Many - 测试大量列"));
+        items.add(new MainItem(new TableListFragment(),"TableList - 测试手势冲突"));
+        items.add(new MainItem(new ManyFragment(),"Many - 测试大量列"));
 
         ItemAdapter itemAdapter = new ItemAdapter(items);
         recyclerView.setAdapter(itemAdapter);
@@ -40,18 +42,17 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
                 MainItem mainItem = (MainItem) adapter.getData().get(position);
-//                Intent i = new Intent(MainActivity.this,mainItem.clazz);
-//                startActivity(i);
-                System.out.println("=== click_pos: " + position + ", sel_item: " + mainItem);
-                replaceFragment(mainItem);
+                Toast.makeText(getApplicationContext(), "=== click_pos: " + position + ", sel_item: " + mainItem, Toast.LENGTH_SHORT).show();
+//                System.out.println("=== click_pos: " + position + ", sel_item: " + mainItem);
+                replaceFragment(mainItem.getFragment());
             }
         });
     }
 
-    public void replaceFragment(MainItem fragment){
+    public void replaceFragment(Fragment fragment){
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.recyclerView, fragment);
+        fragmentTransaction.replace(R.id.content, fragment);
         fragmentTransaction.commit();
     }
 

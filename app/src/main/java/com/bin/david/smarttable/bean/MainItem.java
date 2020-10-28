@@ -6,14 +6,24 @@ import androidx.fragment.app.Fragment;
  * Created by huang on 2017/10/13.
  */
 
-public class MainItem extends Fragment {
+public class MainItem {
 
     public Class clazz;
+    public Fragment fragment;
     public String chartName;
 
     public MainItem(Class clazz, String chartName) {
         this.clazz = clazz;
         this.chartName = chartName;
+    }
+
+    public MainItem(Fragment fragment, String chartName) {
+        this.fragment = fragment;
+        this.chartName = chartName;
+    }
+
+    public Fragment getFragment() {
+        return fragment;
     }
 
     public Class getClazz() {
