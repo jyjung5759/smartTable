@@ -16,19 +16,17 @@ import java.util.ArrayList;
 
 public class TableListActivity extends AppCompatActivity {
 
-    private RecyclerView recyclerView;
-    private TableListAdapter itemAdapter;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recycler);
-        recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         ArrayList<String> items = new ArrayList<>();
-        for(int i = 0;i <100;i++){
+        for (int i = 0;i <100;i++)
             items.add(i+"");
-        }
-        itemAdapter = new TableListAdapter(items);
+
+        TableListAdapter itemAdapter = new TableListAdapter(items);
         recyclerView.setAdapter(itemAdapter);
         itemAdapter.openLoadAnimation();
 

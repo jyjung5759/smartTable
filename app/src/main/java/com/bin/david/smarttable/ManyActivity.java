@@ -3,19 +3,20 @@ package com.bin.david.smarttable;
 import android.content.res.Resources;
 import android.graphics.DashPathEffect;
 import android.os.Bundle;
-import androidx.core.content.ContextCompat;
-import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import com.bin.david.form.core.SmartTable;
 import com.bin.david.form.core.TableConfig;
 import com.bin.david.form.data.CellInfo;
 import com.bin.david.form.data.column.Column;
 import com.bin.david.form.data.format.bg.BaseBackgroundFormat;
-import com.bin.david.form.data.table.TableData;
 import com.bin.david.form.data.format.bg.BaseCellBackgroundFormat;
 import com.bin.david.form.data.format.bg.ICellBackgroundFormat;
 import com.bin.david.form.data.style.FontStyle;
+import com.bin.david.form.data.table.TableData;
 import com.bin.david.form.utils.DensityUtils;
 import com.bin.david.smarttable.bean.ChildData;
 import com.bin.david.smarttable.bean.TableStyle;
@@ -297,8 +298,8 @@ public class ManyActivity extends AppCompatActivity implements View.OnClickListe
         lineChart.getChartTitle().setDirection(IComponent.TOP);
         lineChart.getLegend().setDirection(IComponent.BOTTOM);
         lineChart.setLineModel(LineChart.CURVE_MODEL);
-        BaseAxis verticalAxis =  lineChart.getLeftVerticalAxis();
-        BaseAxis horizontalAxis=  lineChart.getHorizontalAxis();
+        BaseAxis<Double> verticalAxis =  lineChart.getLeftVerticalAxis();
+        BaseAxis<String> horizontalAxis=  lineChart.getHorizontalAxis();
         //设置竖轴方向
         verticalAxis.setAxisDirection(IAxis.AxisDirection.LEFT);
         //设置网格
@@ -319,7 +320,7 @@ public class ManyActivity extends AppCompatActivity implements View.OnClickListe
         //开启MarkView
         lineChart.getProvider().setOpenMark(true);
         //设置MarkView
-        lineChart.getProvider().setMarkView(new BubbleMarkView(this));
+        lineChart.getProvider().setMarkView(new BubbleMarkView<>(this));
 
         //设置显示标题
         lineChart.setShowChartName(true);

@@ -1,10 +1,12 @@
 package com.bin.david.smarttable.bean;
 
+import androidx.fragment.app.Fragment;
+
 /**
  * Created by huang on 2017/10/13.
  */
 
-public class MainItem {
+public class MainItem extends Fragment {
 
     public Class clazz;
     public String chartName;
