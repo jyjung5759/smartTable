@@ -14,6 +14,7 @@ import java.util.List;
  */
 
 public class SheetAdapter  extends BaseQuickAdapter<String,BaseViewHolder>{
+
     private int selectPosition =0;
     public SheetAdapter(@Nullable List<String> data) {
         super(R.layout.item_sheet, data);
