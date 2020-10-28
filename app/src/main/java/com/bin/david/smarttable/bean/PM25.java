@@ -10,8 +10,6 @@ import com.bin.david.form.annotation.SmartTable;
  */
 @SmartTable(name = "PM2.5")
 public class PM25 {
-
-
     /**
      * aqi : 27
      * area : 上海

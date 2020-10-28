@@ -5,11 +5,10 @@ package com.bin.david.smarttable.bean;
  */
 
 public enum TableStyle {
-
   FIXED_X_AXIS("固定顶部"),
   FIXED_Y_AXIS("固定左侧"),
   FIXED_TITLE("固定标题"),
-  @Deprecated
+//  @Deprecated
   FIXED_FIRST_COLUMN("固定第一列"),
   FIXED_COUNT_ROW("固定统计行"),
   ZOOM("是否缩放"),

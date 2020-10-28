@@ -1,12 +1,5 @@
 package com.bin.david.smarttable.bean;
 
-import com.bin.david.form.annotation.ColumnType;
-import com.bin.david.form.annotation.SmartColumn;
-import com.bin.david.form.annotation.SmartTable;
-import com.bin.david.smarttable.bean.ChildData;
-
-import java.util.List;
-
 /**
  * Created by huang on 2017/11/1.
  */
@@ -18,7 +11,6 @@ public class UserInfo {
     private boolean isCheck;
     private String url;
     private Boolean isTest;
-
 
     public UserInfo(String name, int age, long time, boolean isCheck, ChildData childData) {
         this.name = name;

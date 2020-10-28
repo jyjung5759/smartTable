@@ -8,7 +8,6 @@ import com.bin.david.form.annotation.SmartColumn;
  */
 
 public class ChildData {
-
     @SmartColumn(id =5,name = "子类",autoCount = true)
     private String child;
 

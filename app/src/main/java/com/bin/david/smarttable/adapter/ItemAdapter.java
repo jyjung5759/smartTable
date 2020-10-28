@@ -14,8 +14,6 @@ import java.util.List;
  */
 
 public class ItemAdapter extends BaseQuickAdapter<MainItem,BaseViewHolder> {
-
-
     public ItemAdapter(@Nullable List<MainItem> data) {
         super(R.layout.item_main, data);
     }

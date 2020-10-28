@@ -5,7 +5,6 @@ package com.bin.david.smarttable.bean;
  */
 
 public class MainItem {
-
     public Class clazz;
     public String chartName;
 

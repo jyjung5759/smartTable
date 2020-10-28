@@ -5,12 +5,10 @@ package com.bin.david.smarttable.bean;
  */
 
 public class ImagePoint {
-
     public double col;
     public  double row;
     public double width;
     public double height;
-
 
     public ImagePoint(double col, double row) {
         this.col = col;

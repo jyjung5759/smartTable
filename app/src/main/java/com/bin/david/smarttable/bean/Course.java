@@ -5,7 +5,6 @@ package com.bin.david.smarttable.bean;
  */
 
 public class Course {
-
     private String name;
     private int period;
 
