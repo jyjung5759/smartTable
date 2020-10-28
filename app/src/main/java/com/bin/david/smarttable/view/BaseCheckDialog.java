@@ -20,7 +20,6 @@ import java.util.List;
  */
 
 public class BaseCheckDialog<T> {
-
     private View popView;
     private BaseDialog dialog;
     private BaseQuickAdapter<T,BaseViewHolder> quickAdapter;
@@ -42,7 +41,6 @@ public class BaseCheckDialog<T> {
     public void show(Context context,boolean isNewData,List<T> list){
         show(context,isNewData?-1:selectPosition,list);
     }
-
 
     /**
      * 显示
